@@ -1,0 +1,46 @@
+/* Base styles for grid items */
+.grid-container {
+  display: grid;
+  gap: 30px;
+  margin: 0 auto;
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(12, 90px); /* 12 columns of 90px */
+  }
+  .grid-item {
+    width: 90px;
+  }
+}
+
+/* Tablet styles */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .grid-container {
+    gap: 24px; /* Gutter for tablet */
+    grid-template-columns: repeat(6, 45px); /* 6 columns of 45px */
+  }
+  .grid-item {
+    width: 45px;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+  .grid-container {
+    gap: 20px; /* Gutter for mobile */
+    grid-template-columns: repeat(4, 16px); /* 4 columns of 16px */
+  }
+  .grid-item {
+    width: 16px;
+  }
+}
+
+/* Example grid item styles */
+.grid-item {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 5px;
+  text-align: center;
+}

@@ -1,0 +1,26 @@
+/* Login Button Styles */
+.login-button {
+  display: flex;
+  align-items: right;
+  width: 120px;
+  height: 24px;
+  background: white;
+  color: #4070F4;
+  border: none;
+  opacity: 1;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+  
+/* Icon styles */
+.icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+/* Hover effect for button */
+.login-button:hover {
+  background: #4070F4;
+  color: white;
+}

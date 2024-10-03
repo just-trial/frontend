@@ -1,68 +1,159 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Font Face Declaration */
+@font-face {
+  font-family: 'Circular Std Medium'; /* Use a name that represents the font */
+  src: url('/fonts/circular-std-medium-500.ttf') format('truetype');
+  font-weight: 500; /* Medium weight */
+  font-style: normal; /* Normal style */
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+/* Optional: You can also define other styles if needed */
+@font-face {
+  font-family: 'Circular Std';
+  src: url('/fonts/circular-std-medium-500.ttf') format('truetype');
+  font-weight: normal; /* Regular weight */
+  font-style: normal; /* Normal style */
 }
 
+/* Apply the font globally */
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  font-family: 'Circular Std Medium', sans-serif; /* Apply the Circular Std Medium font */
 }
 
+/* Heading 1 Style */
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-family: 'Circular Std Bold', sans-serif;
+  font-size: 40pt;
+  line-height: 45px;
+  letter-spacing: -2px;
+  margin: 0;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+/* Heading 2 Style */
+h2 {
+  font-family: 'Circular Std Bold', sans-serif;
+  font-size: 24pt;
+  line-height: 30px;
+  letter-spacing: -1px;
+  margin: 0;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+/* Heading 3 Style */
+h3 {
+  font-family: 'Circular Std Bold', sans-serif;
+  font-size: 22pt;
+  line-height: 28px;
+  letter-spacing: -1px;
+  margin: 0;
+}
+
+/* Paragraph 1 Style */
+p {
+  font-family: 'Circular Std Book', sans-serif;
+  font-size: 20pt; 
+  line-height: 26px;
+  letter-spacing: 0;
+  margin: 0;
+}
+
+/* Paragraph 2 Style */
+.p2 {
+  font-family: 'Circular Std Book', sans-serif;
+  font-size: 16pt;
+  line-height: 22px;
+  letter-spacing: 0;
+  margin: 0;
+}
+
+/* Paragraph 3 Style */
+.p3 {
+  font-family: 'Circular Std Book', sans-serif;
+  font-size: 14pt;
+  line-height: 18px;
+  letter-spacing: 0;
+  margin: 0;
+}
+
+/* Paragraph 4 Style */
+.p4 {
+  font-family: 'Circular Std Book', sans-serif;
+  font-size: 12pt;
+  line-height: 16px;
+  letter-spacing: 0;
+  margin: 0;
+}
+
+.brand-color-blue {
+  color: #4070F4;
+}
+
+.brand-color-green {
+  color: #2BD67B;
+}
+
+.brand-color-black {
+  color: #0A2156;
+}
+
+.gray-10 {
+  color: #E7E9ED;
+}
+
+.gray-20 {
+  color: #CED2DB;
+}
+
+.gray-30 {
+  color: #B6BCC9;
+}
+
+.gray-40 {
+  color: #9EA5B8;
+}
+
+.gray-50 {
+  color: #858FA6;
+}
+
+.gray-60 {
+  color: #6D7994;
+}
+
+.gray-70 {
+  color: #556282;
+}
+
+.gray-80 {
+  color: #3C4C70;
+}
+
+.gray-90 {
+  color: #24365E;
+}
+
+.gray-100 {
+  color: #0B1F4D;
+}
+
+.support-01 {
+  color: #4070F4;
+}
+
+.support-02 {
+  color: #0BB07B;
+}
+
+.support-03 {
+  color: #FFAD0D;
+}
+
+.support-04 {
+  color: #F03D3D;
+}
+
+.support-05 {
+  color: #E7E9ED;
+}
+
+.full-height {
+  min-height: 100%;
 }

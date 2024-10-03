@@ -1,0 +1,39 @@
+/* Cart Component Styles */
+.cart-container {
+	display: flex;
+	align-items: center;
+	width: 48px;
+	height: 40px;
+	background: #4070F4;
+	color: white;
+	cursor: pointer;
+	padding: 0 10px;
+	border-radius: 4px;
+	position: relative;
+}
+
+/* Cart icon styles */
+.cart-icon {
+	width: 20px;
+	height: 20px;
+	margin-right: 8px;
+}
+
+/* Item count circle styles */
+.item-count {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 20px;
+	height: 20px;
+	background: #FFFFFF14;
+	color: white;
+	border-radius: 50%;
+	position: absolute;
+	right: 5px;
+}
+
+/* Add hover effect for the cart container */
+.cart-container:hover {
+	background: #1b55f5;
+}
