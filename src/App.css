@@ -1,8 +1,8 @@
 .app {
   height: 100vh;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  justify-content: space-between;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   padding: 0;
   margin: 0;
 }

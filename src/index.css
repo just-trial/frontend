@@ -14,6 +14,11 @@
   font-style: normal; /* Normal style */
 }
 
+/* Box sizing rules */
+* {
+  box-sizing: border-box;
+}
+
 /* Apply the font globally */
 body {
   font-family: 'Circular Std Medium', sans-serif; /* Apply the Circular Std Medium font */

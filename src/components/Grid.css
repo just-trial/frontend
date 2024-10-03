@@ -3,6 +3,7 @@
   display: grid;
   gap: 30px;
   margin: 0 auto;
+  background-color: #E7E9ED;
 }
 
 /* Desktop styles */
@@ -43,4 +44,20 @@
   border: 1px solid #ccc;
   padding: 5px;
   text-align: center;
+}
+
+/* Styles for filter box */
+.filter-box {
+  grid-column: span 5; /* Occupy 5 grid items */
+  background-color: #e0e0e0; /* Light grey background */
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+/* Styles for main box */
+.main-box {
+  grid-column: span 7; /* Occupy 7 grid items */
+  background-color: #f0f0f0; /* Slightly different grey background */
+  padding: 20px;
+  border: 1px solid #ccc;
 }
