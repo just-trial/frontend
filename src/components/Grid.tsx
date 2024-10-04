@@ -1,24 +1,22 @@
 import { useState } from 'react'
-import './Grid.css'; // Ensure the CSS file is imported
+import './Grid.css';
 
 const Grid = () => {
   const [count, setCount] = useState(0)
   
   return (
     <div className="grid-container">
-        <div className="grid-item">
-            <h4>Just Travel</h4>
-            <div className="card">
-                <button onClick={() => setCount((count) => count + 1)}>
-                    traveled times {count}
-                </button>
-            </div>
+      <div className="filter-box"></div>
+      <div className="main-box">
+        <div className="cards-container">
+          <div className="card">Card 1</div>
+          <div className="card">Card 2</div>
+          <div className="card">Card 3</div>
+          <div className="card">Card 4</div>
+          <div className="card">Card 5</div>
+          <div className="card">Card 6</div>
         </div>
-      {/* {Array.from({ length: 12 }).map((_, index) => (
-        <div className="grid-item" key={index}>
-          Item {index + 1}
-        </div>
-      ))} */}
+      </div>
     </div>
   );
 };
