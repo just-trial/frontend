@@ -1,9 +1,6 @@
-import { useState } from 'react'
 import './Grid.css';
 
 const Grid = () => {
-  const [count, setCount] = useState(0)
-  
   return (
     <div className="grid-container">
       <div className="filter-box"></div>
