@@ -1,18 +1,29 @@
 .pagination-container {
   background-color: #E7E9ED;
   display: flex;
-  display: row;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  margin: 20px 0;
+  justify-content: flex-end;
+  gap: 20px;
+  padding: 0 0 30px;
+  padding-right: 10%;
+  white-space: nowrap;
 }
 
 .pagination-button {
+  color: #4070f4;
   background-color: #E7E9ED;
   border: none;
   padding: 10px 15px;
-  margin: 0 5px;
   cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.pagination-elypse {
+  background-color: #E7E9ED;
+  border: none;
+  padding: 10px 12px;
   border-radius: 4px;
   transition: background-color 0.3s;
 }
@@ -29,4 +40,15 @@
 .pagination-button.active {
   background-color: #4070f4;
   color: white;
+}
+
+.pagination-container select {
+  width: 69px;
+  height: 28px;
+  padding: 4px 12px;
+  border-radius: 4px;
+  color: #828292;
+  border: 1px solid #8A90BD;
+  opacity: 1;
+  background-color: white;
 }

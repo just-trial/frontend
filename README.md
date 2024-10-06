@@ -123,3 +123,5 @@ export default FetchOnClick;
 6. After that I should do the cart component (still not written) receive the results of listing with a useQuery. And add more tickets as we successfully request it to the backend without real need to refetch.
 
 7. Then we can think about adding memoization to not rerender tickets loaded with the same id.
+
+8. Make the pagination works fine was tricky, because of usability and resizing of buttons.

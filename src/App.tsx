@@ -6,6 +6,7 @@ import { useState } from 'react';
 import Pagination from './components/Pagination';
 
 function App() {
+  const [totalItems] = useState(20);
   const [currentPage, setCurrentPage] = useState(1);
   const totalPages = 10;
 
@@ -19,6 +20,7 @@ function App() {
       <SearchBar/>
       <Grid/>
       <Pagination
+        totalItems={totalItems}
         currentPage={currentPage}
         totalPages={totalPages}
         onPageChange={handlePageChange}

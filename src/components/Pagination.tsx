@@ -1,12 +1,15 @@
 import React from 'react';
+import './Pagination.css';
 
 interface PaginationProps {
+  totalItems: number;
   currentPage: number;
   totalPages: number;
   onPageChange: (page: number) => void;
 }
 
 const Pagination: React.FC<PaginationProps> = ({
+  totalItems,
   currentPage,
   totalPages,
   onPageChange,
@@ -18,7 +21,7 @@ const Pagination: React.FC<PaginationProps> = ({
   const renderPageButtons = () => {
     const buttons = [];
 
-    if (totalPages <= 5) {
+    if (totalPages <= 7) {
       for (let i = 1; i <= totalPages; i++) {
         buttons.push(
           <button
@@ -48,12 +51,12 @@ const Pagination: React.FC<PaginationProps> = ({
 
       // Show ellipsis if needed
       if (currentPage > 3) {
-        buttons.push(<span key="ellipsis-left">...</span>);
+        buttons.push(<span className='pagination-elypse' key="ellipsis-left">...</span>);
       }
 
       // Show current page and surrounding pages
-      const startPage = Math.max(2, currentPage - 1);
-      const endPage = Math.min(totalPages - 1, currentPage + 1);
+      const startPage = Math.max(2, currentPage >= totalPages - 3 ? totalPages - 4 : currentPage - 1);
+      const endPage = Math.min(totalPages - 1, currentPage <= 4 ? 5 : currentPage + 1);
 
       for (let i = startPage; i <= endPage; i++) {
         buttons.push(
@@ -71,7 +74,7 @@ const Pagination: React.FC<PaginationProps> = ({
 
       // Show ellipsis if needed
       if (currentPage < totalPages - 2) {
-        buttons.push(<span key="ellipsis-right">...</span>);
+        buttons.push(<span className='pagination-elypse' key="ellipsis-right">...</span>);
       }
 
       // Always show the last page
@@ -98,14 +101,15 @@ const Pagination: React.FC<PaginationProps> = ({
 
   return (
     <div className="pagination-container">
+      <p className='p4' style={{color: '#828292'}}>Resultados: {totalItems}</p>
+      <p className='p4'>Página:</p>
       <select onChange={handleSelectChange} value={currentPage}>
         {Array.from({ length: totalPages }, (_, index) => (
           <option key={index + 1} value={index + 1}>
-            Page {index + 1}
+            {index + 1}
           </option>
         ))}
       </select>
-      <div className="pagination-buttons">{renderPageButtons()}</div>
       <button
         className="pagination-button"
         onClick={() => handlePageChange(currentPage - 1)}
@@ -113,6 +117,7 @@ const Pagination: React.FC<PaginationProps> = ({
       >
         {"<"}
       </button>
+      {renderPageButtons()}
       <button
         className="pagination-button"
         onClick={() => handlePageChange(currentPage + 1)}

@@ -22,6 +22,7 @@
 /* Apply the font globally */
 body {
   font-family: 'Circular Std Medium', sans-serif; /* Apply the Circular Std Medium font */
+  margin: 0;
 }
 
 /* Heading 1 Style */
