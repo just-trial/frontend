@@ -6,6 +6,8 @@
   width: 100%;
   margin: 0;
   padding: 0;
+  flex: 1;
+  overflow-y: auto;
 }
 
 /* Desktop styles */
@@ -51,15 +53,17 @@
 
 /* Styles for filter box */
 .filter-box {
-  grid-column: span 4; /* Occupy 5 grid items */
+  grid-column: span 4; /* Occupy 4 grid items */
   background-color: #FFFFFFFF;
-  margin: 20px;
+  margin: 20px 0;
+  max-height: 1100px;
+  overflow-y: auto;
 }
 
 /* Styles for main box */
 .main-box {
-  grid-column: span 7; /* Occupy 7 grid items */
-  padding: 20px;
+  grid-column: span 8; /* Occupy 8 grid items */
+  padding: 20px 0;
   height: 100%;
 }
 
@@ -79,5 +83,5 @@
   padding: 15px;
   text-align: center;
   border-radius: 4px;
-  flex: 1;
+  height: 233px;
 }

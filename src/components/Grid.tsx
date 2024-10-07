@@ -3,7 +3,9 @@ import './Grid.css';
 const Grid = () => {
   return (
     <div className="grid-container">
-      <div className="filter-box"></div>
+      <div className="filter-box">
+        <h2>Filtro</h2>
+      </div>
       <div className="main-box">
         <div className="cards-container">
           <div className="card">Card 1</div>
