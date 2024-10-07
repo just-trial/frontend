@@ -1,0 +1,127 @@
+/* Individual card styles */
+.card {
+  display: flex;
+  height: 233px;
+  background-color: #ffffff;
+  overflow: hidden;
+  flex-direction: row;
+}
+
+/* Card image section */
+.card-image {
+  height: 100%;
+  max-width: 213px;
+  max-height: 233px;
+  position: relative;
+}
+
+.card-image img {
+  height: 100%;
+  width: 100%;
+}
+
+/* Favorite button */
+.heart-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  border: 2px solid red;
+  padding: 10px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+.heart-button:hover {
+  background-color: rgba(255, 0, 0, 0.8);
+}
+
+.heart-button:active {
+  background-color: red; /* Change color when clicked */
+}
+
+/* Ticket tag */
+.tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 30px;
+  width: 80px;
+  background-color: white;
+  padding: 8px;
+  border-radius: 15px;
+}
+
+/* Card content section */
+.card-content {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  gap: 8px;
+  flex-grow: 1;
+}
+
+/* Title */
+.card-title {
+  margin: 0;
+}
+
+h3 {
+  color: #0A2156;
+}
+
+/* Location */
+.p3.location {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  color: #3C4C70;
+}
+
+/* Rating section */
+.rating {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.rating-label {
+  background-color: #4070F4;
+  color: white;
+  padding: 8px;
+  border-radius: 4px;
+  width: 40px;
+  height: 38px;
+}
+
+/* Divider */
+.divider {
+  width: 166px;
+  height: 0;
+  border: 1px solid #E7E9ED;
+  opacity: 1;
+}
+
+/* Price tag */
+.price-tag {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Action button */
+.action-button {
+  width: 154px;
+  height: 39px;
+  padding: 12px 28px;
+  background-color: #4070F4;
+  color: white;
+  border: none;
+  border-radius: 3px 0 0 0;
+  cursor: pointer;
+}
+
+.arrow {
+  margin-left: 5px;
+}

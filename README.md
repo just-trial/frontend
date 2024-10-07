@@ -125,3 +125,5 @@ export default FetchOnClick;
 7. Then we can think about adding memoization to not rerender tickets loaded with the same id.
 
 8. Make the pagination works fine was tricky, because of usability and resizing of buttons.
+
+9. The image and heart button lead me to some waste of time until I realize the position should be relative: and I still had to figure how to fill only the heart.
