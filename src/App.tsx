@@ -1,30 +1,18 @@
 import './App.css'
 import Header from './components/Header'
-import Grid from './components/Grid'
 import SearchBar from './components/Searchbar'
-import { useState } from 'react';
-import Pagination from './components/Pagination';
+import SearchPage from './pages/SearchPage';
 
 function App() {
-  const [totalItems] = useState(20);
-  const [currentPage, setCurrentPage] = useState(1);
-  const totalPages = 10;
 
-  const handlePageChange = (page: number) => {
-    setCurrentPage(page);
-  };
 
   return (
     <div className='app'>
       <Header />
       <SearchBar/>
-      <Grid/>
-      <Pagination
-        totalItems={totalItems}
-        currentPage={currentPage}
-        totalPages={totalPages}
-        onPageChange={handlePageChange}
-      />
+      <div className='content'>
+        <SearchPage />
+      </div>
     </div>
   )
 }

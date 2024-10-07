@@ -2,10 +2,10 @@
   background-color: #E7E9ED;
   display: flex;
   flex-direction: row;
+  height: 10%;
   align-items: center;
   justify-content: flex-end;
   gap: 20px;
-  padding: 0 0 30px;
   padding-right: 10%;
   white-space: nowrap;
 }
