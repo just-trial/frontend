@@ -9,12 +9,12 @@ const Grid = () => {
       </div>
       <div className="main-box">
         <div className="cards-container">
-          <Card index={1}/>
-          <Card index={2}/>
-          <Card index={3}/>
-          <Card index={4}/>
-          <Card index={5}/>
-          <Card index={6}/>
+          <Card index={1} price={1391.28} title={"Lorem ipsum dolor amet consectetur"} description='GetYourGuide Tours & Tickets GmbH'/>
+          <Card index={2} price={1391.28} title={"Lorem ipsum dolor amet consectetur"} description='GetYourGuide Tours & Tickets GmbH'/>
+          <Card index={3} price={1391.28} title={"Lorem ipsum dolor amet consectetur"} description='GetYourGuide Tours & Tickets GmbH'/>
+          <Card index={4} price={1391.28} title={"Lorem ipsum dolor amet consectetur"} description='GetYourGuide Tours & Tickets GmbH'/>
+          <Card index={5} price={1391.28} title={"Lorem ipsum dolor amet consectetur"} description='GetYourGuide Tours & Tickets GmbH'/>
+          <Card index={6} price={1391.28} title={"Lorem ipsum dolor amet consectetur"} description='GetYourGuide Tours & Tickets GmbH'/>
         </div>
       </div>
     </div>
