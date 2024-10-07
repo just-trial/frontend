@@ -1,20 +1,32 @@
-import Card from './Card';
 import './Grid.css';
 
+import { useSelector } from 'react-redux';
+import { RootState } from '../redux/store';
+
+import Card from './Card';
+
 const Grid = () => {
+  const { tickets } = useSelector(
+    (state: RootState) => state.search
+  );
+
   return (
     <div className="grid-container">
       <div className="filter-box">
         <h2>Filtro</h2>
       </div>
+
       <div className="main-box">
         <div className="cards-container">
-          <Card index={1} price={1391.28} title={"Lorem ipsum dolor amet consectetur"} description='GetYourGuide Tours & Tickets GmbH'/>
-          <Card index={2} price={1391.28} title={"Lorem ipsum dolor amet consectetur"} description='GetYourGuide Tours & Tickets GmbH'/>
-          <Card index={3} price={1391.28} title={"Lorem ipsum dolor amet consectetur"} description='GetYourGuide Tours & Tickets GmbH'/>
-          <Card index={4} price={1391.28} title={"Lorem ipsum dolor amet consectetur"} description='GetYourGuide Tours & Tickets GmbH'/>
-          <Card index={5} price={1391.28} title={"Lorem ipsum dolor amet consectetur"} description='GetYourGuide Tours & Tickets GmbH'/>
-          <Card index={6} price={1391.28} title={"Lorem ipsum dolor amet consectetur"} description='GetYourGuide Tours & Tickets GmbH'/>
+          {tickets?.map((ticket, index) => (
+              <Card
+                key={index}
+                index={index + 1} // adding 1 for human-readable index
+                price={ticket.price}
+                title={ticket.name}
+                city={ticket.city}
+              />
+            ))}
         </div>
       </div>
     </div>

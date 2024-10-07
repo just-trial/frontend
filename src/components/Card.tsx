@@ -5,10 +5,10 @@ interface CardProps {
   index: number;
   price: number;
   title: string;
-  description: string;
+  city: string;
 }
 
-const Card : React.FC<CardProps>= ({index, price, title, description}) => {
+const Card : React.FC<CardProps>= ({index, price, title, city}) => {
   return (
     <div className="card">
       <div className="card-image">
@@ -20,7 +20,7 @@ const Card : React.FC<CardProps>= ({index, price, title, description}) => {
       </div>
        <div className="card-content">
         <h3 className="card-title">{title}</h3>
-        <p className="p3 location"><img src="location.svg" alt="Location Icon" />{description}</p>
+        <p className="p3 location"><img src="location.svg" alt="Location Icon" />{city}</p>
         <div className="rating">
           <span className="rating-label">6.3</span>
           <p className="p3 rating-description" style={{padding: '5px', color: '#0A2156'}}>Excelente</p><p className="p3" style={{padding: '5px', color: '#9EA5B8'}}>(433 reviews)</p>

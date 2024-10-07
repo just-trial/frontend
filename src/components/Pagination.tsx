@@ -1,21 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Pagination.css';
 
-interface PaginationProps {
-  totalItems: number;
-  currentPage: number;
-  totalPages: number;
-  onPageChange: (page: number) => void;
-}
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '../redux/store';
+import { setCurrentPage } from '../redux/searchSlice';
 
-const Pagination: React.FC<PaginationProps> = ({
-  totalItems,
-  currentPage,
-  totalPages,
-  onPageChange,
-}) => {
+
+const Pagination: React.FC = () => {
+  const dispatch = useDispatch();
+
+  const { totalEntries, totalPages, currentPage } = useSelector(
+    (state: RootState) => state.search
+  );
+  
   const handlePageChange = (page: number) => {
-    onPageChange(page);
+    dispatch(setCurrentPage(page));
   };
 
   const renderPageButtons = () => {
@@ -101,7 +100,7 @@ const Pagination: React.FC<PaginationProps> = ({
 
   return (
     <div className="pagination-container">
-      <p className='p4' style={{color: '#828292'}}>Resultados: {totalItems}</p>
+      <p className='p4' style={{color: '#828292'}}>Resultados: {totalEntries}</p>
       <p className='p4'>Página:</p>
       <select onChange={handleSelectChange} value={currentPage}>
         {Array.from({ length: totalPages }, (_, index) => (
