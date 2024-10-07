@@ -1,9 +1,14 @@
 import './Grid.css';
 
+import { memo } from 'react';
+
 import { useSelector } from 'react-redux';
 import { RootState } from '../redux/store';
 
 import Card from './Card';
+
+// Memoize the Card component to prevent unnecessary re-renders
+const MemoizedCard = memo(Card);
 
 const Grid = () => {
   const { tickets } = useSelector(
@@ -19,9 +24,9 @@ const Grid = () => {
       <div className="main-box">
         <div className="cards-container">
           {tickets?.map((ticket, index) => (
-              <Card
-                key={index}
-                index={index + 1} // adding 1 for human-readable index
+              <MemoizedCard
+                key={ticket.id}
+                index={index + 1}
                 price={ticket.price}
                 title={ticket.name}
                 city={ticket.city}
