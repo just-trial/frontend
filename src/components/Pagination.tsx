@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react';
 import './Pagination.css';
 
 import { useDispatch, useSelector } from 'react-redux';
@@ -30,7 +29,7 @@ const Pagination: React.FC = () => {
             }`}
             onClick={() => handlePageChange(i)}
           >
-            {i}
+            {i.toString().padStart(2, '0')}
           </button>
         );
       }
@@ -44,7 +43,7 @@ const Pagination: React.FC = () => {
           }`}
           onClick={() => handlePageChange(1)}
         >
-          1
+          01
         </button>
       );
 
@@ -66,7 +65,7 @@ const Pagination: React.FC = () => {
             }`}
             onClick={() => handlePageChange(i)}
           >
-            {i}
+            {i.toString().padStart(2, '0')}
           </button>
         );
       }
@@ -85,7 +84,7 @@ const Pagination: React.FC = () => {
           }`}
           onClick={() => handlePageChange(totalPages)}
         >
-          {totalPages}
+          {totalPages.toString().padStart(2, '0')}
         </button>
       );
     }
@@ -95,7 +94,7 @@ const Pagination: React.FC = () => {
 
   const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedPage = Number(event.target.value);
-    onPageChange(selectedPage);
+    handlePageChange(selectedPage);
   };
 
   return (
