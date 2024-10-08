@@ -79,22 +79,6 @@ h3 {
   color: #3C4C70;
 }
 
-/* Rating section */
-.rating {
-  margin-top: 30px;
-  display: flex;
-  align-items: center;
-}
-
-.rating-label {
-  background-color: #4070F4;
-  color: white;
-  padding: 8px;
-  border-radius: 4px;
-  width: 40px;
-  height: 38px;
-}
-
 /* Separator */
 .card .separator {
   width: 0;

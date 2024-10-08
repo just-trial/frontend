@@ -9,6 +9,8 @@ import CoverSection from '../components/CoverSection';
 
 import { request, gql } from 'graphql-request';
 import { useEffect, useState } from 'react';
+import Grid from '../components/Grid';
+import DetailsGrid from '../components/DetailsGrid';
 
 const GRAPHQL_ENDPOINT = 'https://just-travel.fly.dev/graphql';
 
@@ -88,6 +90,7 @@ const DetailsPage = () => {
         </div>
       </div>
       <CoverSection />
+      <Grid content={<DetailsGrid ticket={ticket}/>}/>
     </div>
   );
 };

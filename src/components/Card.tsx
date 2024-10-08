@@ -3,6 +3,7 @@ import './Card.css';
 
 import { Link } from 'react-router-dom';
 import TicketHeader from './TicketHeader';
+import TicketRating from './TicketRating';
 
 interface CardProps {
   id: string;
@@ -24,10 +25,7 @@ const Card : React.FC<CardProps>= ({id, index, price, title, city}) => {
       </div>
        <div className="card-content">
         <TicketHeader title={title} city={city}/>
-        <div className="rating">
-          <span className="rating-label">6.3</span>
-          <p className="p3 rating-description" style={{padding: '5px', color: '#0A2156'}}>Excelente</p><p className="p3" style={{padding: '5px', color: '#9EA5B8'}}>(433 reviews)</p>
-        </div>
+        <TicketRating />
       </div>
       <div className="separator"></div>
       <div className="price-tag">
