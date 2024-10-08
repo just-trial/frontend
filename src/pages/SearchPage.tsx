@@ -1,11 +1,15 @@
 import Grid from '../components/Grid'
 import Pagination from '../components/Pagination';
+import SearchBar from '../components/Searchbar';
 
 function SearchPage() {
   return (
     <>
-      <Grid/>
-      <Pagination/>
+      <SearchBar/>
+      <div className='content'>
+        <Grid/>
+        <Pagination/>
+      </div>
     </>
   )
 }
