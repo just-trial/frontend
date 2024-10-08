@@ -1,0 +1,20 @@
+.details-page {}
+
+.details-page-header {
+  display: flex;
+}
+  
+.back-button {
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.back-button:hover {
+  background-color: #3050C4;
+}

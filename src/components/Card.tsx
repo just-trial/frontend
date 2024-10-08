@@ -1,14 +1,18 @@
 import React from 'react';
 import './Card.css';
 
+import { Link } from 'react-router-dom';
+import TicketHeader from './TicketHeader';
+
 interface CardProps {
+  id: string;
   index: number;
   price: number;
   title: string;
   city: string;
 }
 
-const Card : React.FC<CardProps>= ({index, price, title, city}) => {
+const Card : React.FC<CardProps>= ({id, index, price, title, city}) => {
   return (
     <div className="card">
       <div className="card-image">
@@ -19,8 +23,7 @@ const Card : React.FC<CardProps>= ({index, price, title, city}) => {
         </button>
       </div>
        <div className="card-content">
-        <h3 className="card-title">{title}</h3>
-        <p className="p3 location"><img src="location.svg" alt="Location Icon" />{city}</p>
+        <TicketHeader title={title} city={city}/>
         <div className="rating">
           <span className="rating-label">6.3</span>
           <p className="p3 rating-description" style={{padding: '5px', color: '#0A2156'}}>Excelente</p><p className="p3" style={{padding: '5px', color: '#9EA5B8'}}>(433 reviews)</p>
@@ -32,9 +35,15 @@ const Card : React.FC<CardProps>= ({index, price, title, city}) => {
         <div className="current-price">
           <p className="p3">R$</p><h2 style={{color: '#4070F4'}}>{price.toFixed(2)}</h2>
         </div>
-        <button className="action-button">Saber mais
-          <img src="/arrow.svg" alt="Arrow" className="arrow-icon" />
-        </button>
+        <Link
+          key={id}
+          to={`/ticket/${id}`}
+          state={{ from: location.pathname }}
+        >
+          <button className="action-button">Saber mais
+            <img src="/arrow.svg" alt="Arrow" className="arrow-icon" />
+          </button>
+        </Link>
       </div>
     </div>
   );

@@ -13,8 +13,8 @@ const Header = () => {
           <div>
             <p className='p4'>Cotação dólar hoje: R${quote}</p>
           </div>
-          <img src="flag.svg"></img>
-          <img src="help.svg"></img>
+          <img src="/flag.svg"></img>
+          <img src="/help.svg"></img>
           <div className="separator"></div>
           <LoginButton/>
           <CartButton/>

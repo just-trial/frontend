@@ -23,9 +23,11 @@ const Grid = () => {
 
       <div className="main-box">
         <div className="cards-container">
+
           {tickets?.map((ticket, index) => (
               <MemoizedCard
                 key={ticket.id}
+                id={ticket.id}
                 index={index + 1}
                 price={ticket.price}
                 title={ticket.name}
