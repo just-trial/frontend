@@ -2,8 +2,12 @@ import './DetailsGrid.css';
 
 import { useState } from 'react';
 
+import { addTicketToCart } from '../redux/cartSlice'; // Import action
+import { AppDispatch, RootState } from '../redux/store';
+
 import MapPreview from './MapPreview';
 import TicketRating from './TicketRating';
+import { useDispatch, useSelector } from 'react-redux';
 
 interface Ticket {
   id: string;
@@ -19,6 +23,8 @@ interface DetailsGridProps {
 }
 
 const DetailsGrid: React.FC<DetailsGridProps> = ({ ticket }) => {
+  const dispatch = useDispatch<AppDispatch>();
+
   const [selectedTicketType, setSelectedTicketType] = useState<'adult' | 'children'>('adult');
   const [selectedDate, setSelectedDate] = useState<string>(new Date().toISOString().split('T')[0]);
 
@@ -30,13 +36,20 @@ const DetailsGrid: React.FC<DetailsGridProps> = ({ ticket }) => {
     }
   };
 
-
   // Function to handle clicking on the date picker section
   const handleIngressClick = () => {
     const ingress = document.querySelector('.ingress') as HTMLInputElement;
     if (ingress) {
       ingress.focus();
       ingress.click();
+    }
+  };
+  const cartId = useSelector((state: RootState) => state.cart.cartId) || "2";
+
+
+  const handleAddToCart = () => {
+    if (ticket) {
+      dispatch(addTicketToCart({ ticketId: ticket.id, cartId }));
     }
   };
 
@@ -58,7 +71,7 @@ const DetailsGrid: React.FC<DetailsGridProps> = ({ ticket }) => {
       </div>
       
       <div className="order-box">
-       <div className="order-section" onClick={handleDatePickerClick}>
+        <div className="order-section" onClick={handleDatePickerClick}>
           <img src="/calendar.svg" alt="Calendar" className="calendar-icon" />
           <div>
             <p className="p22">Data do ingresso</p>
@@ -105,7 +118,7 @@ const DetailsGrid: React.FC<DetailsGridProps> = ({ ticket }) => {
           <h2 style={{ color: '#4070F4', marginLeft: 'auto' }}>${ticket?.price || '0.00'}</h2>
         </div>
 
-        <button className="buy-button">Comprar ingresso</button>
+        <button className="buy-button" onClick={handleAddToCart}>Comprar ingresso</button>
       </div>
     </>
   );
