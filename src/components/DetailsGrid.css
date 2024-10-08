@@ -21,4 +21,78 @@
   margin: 20px 0;
   max-height: 473px;
   border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.order-section {
+  margin: 10px;
+  display: flex;
+  padding: 10px 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.p22 {
+  font-family: 'Circular Std', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+  text-align: left;
+  color: #0A2156;
+}
+
+.separator {
+  width: 305px;
+  height: 0px;
+  border-top: 1px solid #E7E9ED;
+  opacity: 1;
+}
+
+.calendar-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.date-picker {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.dropdown-icon {
+  margin-left: 40px;
+}
+
+.ingress-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.ingress {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #FFFFFFFF;
+  text-overflow: ellipsis;
+  border: none;
+}
+
+.summary {
+  flex-direction: row;
+}
+
+.buy-button {
+  padding: 20px 40px;
+  background-color: #4070F4;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 20px;
+}
+
+.buy-button:hover {
+  background-color: #365e8a;
 }
